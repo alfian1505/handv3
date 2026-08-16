@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Orbitron', system-ui, sans-serif;
+  --font-body: 'Rajdhani', system-ui, sans-serif;
+  --color-cyan: #00f0ff;
+  --color-magenta: #ff00aa;
+  --color-lime: #ccff00;
+  --color-void: #050510;
+  --color-surface: rgba(255,255,255,0.03);
+}
+
+html, body {
+  background: #050510;
+  color: #e8e8f0;
+  font-family: 'Rajdhani', system-ui, sans-serif;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  10% { opacity: 0.85; }
+  20% { opacity: 0.95; }
+  30% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 6px #00f0ff); }
+  50% { filter: drop-shadow(0 0 16px #ff00aa); }
+}
+
+.text-glitch {
+  animation: flicker 4s infinite;
+}
